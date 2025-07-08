@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.12 (vcs_playwrt)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (vcs_playwrt)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (lcg_uat)" project-jdk-type="Python SDK" />
 </project>
