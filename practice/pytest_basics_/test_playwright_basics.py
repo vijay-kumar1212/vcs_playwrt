@@ -1,4 +1,8 @@
-from playwright.sync_api import Page
+import re
+import time
+from playwright.sync_api import Page, expect
+
+
 def test_playwright_basics(playwright):  #here playwright is a fixture provided by pytest-playwright package
     # this is a global fixture
     browser = playwright.chromium.launch(headless=False, args=["--start-fullscreen"])
@@ -17,7 +21,7 @@ def test_invoke_browser(page:Page):
 
 
 def test_core_locators(page:Page):
-    page.goto("https://www.coral.co.uk/en/sports")
+    page.goto("https:sports.ladbrokes.com")
     page.locator("//span[contains(text(),'LOG IN')]").click()
     # we can identify the element by using the label of the element
     # to use get by label element should be wrapped in label tag or element id should be referred in for parameter
@@ -25,7 +29,12 @@ def test_core_locators(page:Page):
     # <br>
     # <input> name='username', id='username'
     # page.get_by_label(" Email or Username ").fill("varna")
-    page.locator("#userId").type("varna")
-    page.locator("//input[@type='password']").fill("Lbr12345")
+    page.locator("#userId").type("Shaibuddin")
+    page.locator("//input[@type='password']").type("Lbr12345")
     page.wait_for_selector("#rememberMe").click()
     page.get_by_role("button", name=" Log in ").click()
+    # page.get_by_text(" Log in ").click()
+    # page.locator(".//*[@class='ds-btn-text']").click()
+    time.sleep(7)
+    # expect(page.get_by_text(re.compile(r"Login failed.\*sPlease review your details and try again."))).to_be_visible(timeout=10000)
+    #here we need to import expect from sync api

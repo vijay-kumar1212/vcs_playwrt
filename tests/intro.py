@@ -50,7 +50,7 @@ create a new project folder
 
 how to create and run playwright tests
 
-to run tests from terinal
+to run tests from terminal
 
 use command as pytest -s  this command will run all the modules available in the current package or directory.
 
