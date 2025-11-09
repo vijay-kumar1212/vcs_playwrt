@@ -36,5 +36,5 @@ def test_core_locators(page:Page):
     # page.get_by_text(" Log in ").click()
     # page.locator(".//*[@class='ds-btn-text']").click()
     time.sleep(7)
-    # expect(page.get_by_text(re.compile(r"Login failed.\*sPlease review your details and try again."))).to_be_visible(timeout=10000)
+    expect(page.get_by_text(re.compile(r"Login failed.\*sPlease review your details and try again."))).to_be_visible(timeout=10000)
     #here we need to import expect from sync api

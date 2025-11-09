@@ -54,15 +54,31 @@ to run tests from terminal
 
 use command as pytest -s  this command will run all the modules available in the current package or directory.
 
--s will print logs and any print state ments
+-s will print logs and any print statements
 
 if we want to run specific function from specific module use below command
 pytest module_name::function name
+pytest test_rahul.py::test_ui_validation_dynamic_card_selection -s -v
+pytest test_rahul::test_ui_validation_dynamic_card_selection -s -v
 
 -v stands for verbose
 
 this will provide full names of tests and more details
 
 -m smoke if we have any tests marked with smoke only will run
+
+"""
+
+# Constructor
+
+"""
+constructor is just like a method which will be called automatically when we create a object for that class.
+
+If we haven't defined any constructor the default constructor will be called.
+
+class variable and instance variable
+
+The variables which created inside a constructor is known as instance variable.
+
 
 """
