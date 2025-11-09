@@ -14,6 +14,7 @@ def test_e2e_web_api(playwright:Playwright):
     page.get_by_placeholder("email@example.com").fill("rahulshetty@gmail.com")
     page.get_by_role("textbox", name="enter your passsword").fill("Iamking@000")
     page.get_by_role("button", name="Login").click()
+    psge.get_by_role("button", name="Orders").click()
 
     #orderhistory page
     page.locator("tr").filter(has_text=order_id).get_by_role("button", name='View').click()
