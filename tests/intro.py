@@ -67,6 +67,9 @@ this will provide full names of tests and more details
 
 -m smoke if we have any tests marked with smoke only will run
 
+If we want to run any test by its name we can use command in trminal as -k web_api(partial name of the test), so that it
+will search for that key word in test method name will run that identified test
+
 """
 
 # Constructor
@@ -80,5 +83,10 @@ class variable and instance variable
 
 The variables which created inside a constructor is known as instance variable.
 
+for parallel running we have to install pytext-xdist plugin
+
+pytest -n 3 --html=report.html this will generate html report
+
+ pytest --browser chromium -n 3 --tracing on --html=report.html
 
 """
