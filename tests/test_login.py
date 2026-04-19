@@ -11,9 +11,12 @@ First we have to install playwright by using pip install playwright
 there by we have to run playwright install to download latest browsers.
 """
 with sync_playwright() as p:
+    print(p.devices.keys())
+    iphone = p.devices['iPhone 12']
     browser = p.chromium.launch(headless=False)
+    context = browser.new_context(**iphone)
     # browser = p.webkit.launch(headless=False)
-    page = browser.new_page()
+    page = context.new_page()
     # page.set_viewport_size({'width':1920, 'height':1080})
     # Get screen resolution of the primary monitor
     # we need to install from screeninfo import get_monitors

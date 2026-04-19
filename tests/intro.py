@@ -67,7 +67,7 @@ this will provide full names of tests and more details
 
 -m smoke if we have any tests marked with smoke only will run
 
-If we want to run any test by its name we can use command in trminal as -k web_api(partial name of the test), so that it
+If we want to run any test by its name we can use command in terminal as -k web_api(partial name of the test), so that it
 will search for that key word in test method name will run that identified test
 
 """
