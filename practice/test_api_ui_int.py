@@ -20,7 +20,7 @@ with open("data/credentials.json") as f:
 # For this defining fixture user_credentials in conf test file
 
 
-
+# tet
 @pytest.mark.parametrize("user_credentials", user_credentials_list)
 def test_e2e_web_api(playwright:Playwright, browserInstance, user_credentials):
     user_name = user_credentials["userEmail"]
